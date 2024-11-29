@@ -79,6 +79,10 @@ section:has(.sports) {
   background-attachment: fixed;
 }
 
+/* :is(section, article) :is(h1,h2,h3){
+
+} */
+
 /* Where, agrupa los elementos y elimina la especificidad */
 :where(section, article) p {
   color: aliceblue;

@@ -1,0 +1,32 @@
+body {
+  background-color: bisque;
+}
+
+header,
+footer,
+section {
+  text-align: center;
+  border: 1px solid;
+}
+
+header,
+footer {
+  min-height: 10vh;
+  background-color: brown;
+}
+
+section {
+  min-height: 60vh;
+  width: 50%;
+  float: left;
+  background-color: chocolate;
+}
+
+img {
+  float: right;
+  margin: 1rem;
+}
+
+div.clearfix {
+  clear: both;
+}
