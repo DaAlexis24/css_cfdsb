@@ -1,0 +1,98 @@
+/* Desktop first o diseño descendente - Utilizado actualmente */
+
+/* body {
+  margin: 2rem;
+  background-color: bisque;
+}
+
+@media (max-width: 800px) {
+  body {
+    background-color: brown;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    background-color: chocolate;
+  }
+} */
+
+/* Mobile first o diseño ascendente  */
+
+:root {
+  --font-base: "Roboto", sans-serif;
+  --font-techno: "Chakra Petch", sans-serif;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: chocolate;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-techno);
+  padding-block: 1rem;
+}
+
+img {
+  margin: 0.5rem auto;
+}
+
+footer {
+  text-align: center;
+  padding-block-end: 1rem;
+}
+
+nav {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.separator {
+  width: 50%;
+  /* centra y da margen */
+  margin: 2rem auto;
+  border: 1px solid brown;
+}
+
+header {
+  background-color: brown;
+  color: bisque;
+  padding: 1.9rem 2rem;
+  nav ul {
+    /* convierte el bloque en una fila */
+    display: flex;
+    /* Ordenamos los elementos del navegador */
+    justify-content: space-between;
+  }
+  [class*="fa"] {
+    font-size: 2rem;
+  }
+}
+
+main {
+  margin: 2rem;
+}
+
+/* almacenan el conjunto de instrucciones que pisan otras instrucciones según cascada */
+@media (min-width: 700px) {
+  body {
+    background-color: rgb(252, 206, 151);
+  }
+  .articles-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+}
