@@ -121,3 +121,62 @@ section:nth-of-type(2) {
       calc(var(--base-delay) + 2 * var(--interval));
   }
 }
+
+.three-balls-animation {
+  margin-top: 6rem;
+  --space: 10rem;
+  --base-delay: 0.5s;
+  --interval: 0.5s;
+
+  .ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(95, 89, 198);
+    background: radial-gradient(
+      circle,
+      rgb(120, 19, 28) 0%,
+      rgb(97, 60, 78) 100%
+    );
+    animation: move-linear var(--interval) cubic-bezier(0.5, 0, 0.5, 1) both;
+    animation-delay: calc(var(--base-delay) + var(--interval) * var(--i));
+  }
+}
+
+@keyframes move-linear {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: translate(var(--space), 0);
+  }
+}
+.states {
+  margin-top: 2rem;
+  button {
+    appearance: none;
+    padding: 1rem 2rem;
+    border: 1px solid gray;
+    background-color: brown;
+    color: bisque;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 1s;
+
+    &:hover,
+    &:focus {
+      /* background-color: bisque;
+          color: brown; */
+      opacity: 0.5;
+    }
+
+    &:active {
+      transition-duration: 1s;
+      opacity: 1;
+      background-color: brown;
+      color: rgb(255, 145, 10);
+      transform: scale(90%);
+    }
+  }
+}
